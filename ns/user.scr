@@ -1,0 +1,659 @@
+// NOTE:  THIS FILE IS AUTOMATICALLY REGENERATED, 
+//DO NOT EDIT THIS HEADER, YOUR COMMENTS WILL BE LOST IF YOU DO
+// User options script
+//
+// Format:
+//  Version [float]
+//  Options description followed by 
+//  Options defaults
+//
+// Option description syntax:
+//
+//  "cvar" { "Prompt" { type [ type info ] } { default } }
+//
+//  type = 
+//   BOOL   (a yes/no toggle)
+//   STRING
+//   NUMBER
+//   LIST
+//
+// type info:
+// BOOL                 no type info
+// NUMBER       min max range, use -1 -1 for no limits
+// STRING       no type info
+// LIST          delimited list of options value pairs
+//
+//
+// default depends on type
+// BOOL is "0" or "1"
+// NUMBER is "value"
+// STRING is "value"
+// LIST is "index", where index "0" is the first element of the list
+
+
+// Half-Life User Info Configuration Layout Script (stores last settings chosen, too)
+// File generated:  Wed Jan 31 00:34:48 AM
+//
+//
+// Cvar	-	Setting
+
+VERSION 1.0
+
+DESCRIPTION INFO_OPTIONS
+{
+	"cl_placebo"
+	{
+		"------------------------------------------------------- AUDIO ----------------------------------------------------------------"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_ambientsound"
+	{
+		"Ambient sound volume"
+		{ NUMBER 0.000000 2.000000 }
+		{ "0.600000" }
+	}
+	
+	"cl_musicenabled"
+	{
+		"In-game music enabled"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_musicvolume"
+	{
+		"In-game music volume"
+		{ NUMBER 0.000000 2.000000 }
+		{ "0.600000" }
+	}
+
+	"cl_musicdelay"
+	{
+		"Random seconds between songs (-1 = Play once)"
+		{ NUMBER -1.000000 10000.000000 }
+		{ "-1" }
+	}
+
+	"cl_placebo"
+	{
+		"---------------------------------------------------- GAMEPLAY --------------------------------------------------------------"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"nsrates"
+	{
+		"Network rates (Try top to bottom until it feels stable)"
+		{
+			LIST
+			"[No Change]" "0"
+			"1: Lowest delay, but enemy stuttering likely" "1"
+			"2" "2"
+			"3" "3"
+			"4: NS default" "4"
+			"5" "5"
+			"6" "6"
+			"7: HL default" "7"
+			"8" "8"
+			"9: Poor connection quality" "9"
+		}
+		{ "0.000000" }
+	}
+
+	"cl_bob"
+	{
+		"Weapon bobbing (0.005 default)"
+		{ NUMBER 0.000000 0.010000 }
+		{ "0.005000" }
+	}
+
+	"cl_bobview"
+	{
+		"View bobbing (requires weapon bobbing)"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_weaponswap"
+	{
+		"Auto drop LMG for better weapon"
+		{
+			LIST
+			"Never" "0"
+			"Always" "1"
+			"If not empty" "2"
+		}
+		{ "2.000000" }
+	}
+	
+	"zoom_sensitivity_ratio"
+	{
+		"Zoom sensitivity ratio (Skulk/Gorge)"
+		{ NUMBER 0.000000 5.000000 }
+		{ "1.000000" }
+	}
+
+	"senslock"
+	{
+		"Don't scale sensitivity with FOV (Skulk/Gorge)"
+		{ BOOL }
+		{ "0" }
+	}
+	
+	"cl_pistoltrigger"
+	{
+		"Pistol binary trigger (pistol script)"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"hud_fastswitch"
+	{
+		"Weapon fast-switch"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_cmhotkeys"
+	{
+		"Commander hotkeys"
+		{ STRING }
+		{ "qwerasdfzxcv" }
+	}
+
+	"cl_cmcancellast"
+	{
+		"Commander cancel button is the last button (same as recycle)"
+		{ BOOL }
+		{ "0" }
+	}
+	
+	"cl_placebo"
+	{
+		"------------------------------------------------------- HUD -------------------------------------------------------------------"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_autohelp"
+	{
+		"Show tutorial hints"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"hud_style"
+	{
+		"HUD style"
+		{
+			LIST
+			"Original" "0"
+			"Minimal" "1"
+			"Competitive - Nine Legends" "2"
+			"Competitive - Nine Legends (small health/ammo)" "3"
+		}
+		{ "1.000000" }
+	}
+
+	"hud_mapstyle"
+	{
+		"Map style"
+		{
+			LIST
+			"Opaque unlabeled" "0"
+			"Opaque labeled" "1"
+			"Semi-transparent unlabeled" "2"
+			"Semi-transparent labeled" "3"
+			"Transparent unlabeled" "4"
+			"Transparent labeled" "5"
+		}
+		{ "3.000000" }
+	}
+
+	"cl_hudmapzoom"
+	{
+		"Marine minimap zoom level"
+		{
+			LIST
+			"No map" "0"
+			"No zoom (X1)" "1"
+			"Medium zoom (2X)" "2"
+			"Full zoom (3X) " "3"
+		}
+		{ "2.000000" }
+	}
+
+	"hud_waypoint_draw"
+	{
+		"Show waypoints on HUD"
+		{
+			LIST
+			"Never" "0"
+			"Always" "1"
+			"Until acknowledged" "2"
+		}
+		{ "2.000000" }
+	}
+
+	"hud_waypoint_blink"
+	{
+		"Waypoint blinking"
+		{
+			LIST
+			"Never" "0"
+			"Always" "1"
+			"On minimap only" "2"
+		}
+		{ "2.000000" }
+	}
+	
+	"hud_teamhealthalert"
+	{
+		"Show health/armor of teammates when below this %"
+		{ NUMBER 0.000000 100.000000 }
+		{ "95.000000" }
+	}
+
+	"hud_nameinfo"
+	{
+		"Teammate's welder/parasite status"
+		{
+			LIST
+			"Don't show" "0"
+			"Full length" "1"
+			"Shortened" "2"
+			"One letter" "3"
+		}
+		{ "1.000000" }
+	}
+
+	"hud_mapnames"
+	{
+		"Length of minimap names (1 = unlimited)"
+		{ NUMBER 0.000000 30.000000 }
+		{ "5.000000" }
+	}
+
+	"hud_mapnamesComm"
+	{
+		"Show names on minimap when commander"
+		{ BOOL }
+		{ "1" }
+	}
+			
+	"cl_showspeed"
+	{
+		"Show player speed"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_mutemenu"
+	{
+		"Scoreboard mute menu hotkey"
+		{
+			LIST
+			"None" "0"
+			"Left click" "1"
+			"Right click" "2"
+			"Middle mouse" "3"
+		}
+		{ "3.000000" }
+	}
+		
+	"cl_centerentityid"
+	{
+		"Center player names"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_buildmessages"
+	{
+		"Show team build messages"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_labelhivesight"
+	{
+		"Show alien hivesight text"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"hud_health_scale"
+	{
+		"Health size scale"
+		{ NUMBER 0.000000 3.000000 }
+		{ "1.000000" }
+	}
+
+	"hud_health_alphamin"
+	{
+		"Health minimum opacity (0-255)"
+		{ NUMBER 0.000000 255.000000 }
+		{ "128.000000" }
+	}
+
+	"hud_health_x"
+	{
+		"Health screen position X (0-1, 0 is default)"
+		{ NUMBER 0.000000 1.000000 }
+		{ "0.000000" }
+	}
+
+	"hud_health_y"
+	{
+		"Health screen position Y (0-1, 0 is default)"
+		{ NUMBER 0.000000 1.000000 }
+		{ "0.000000" }
+	}
+
+	"hud_ammo_scale"
+	{
+		"Ammo size scale"
+		{ NUMBER 0.000000 3.000000 }
+		{ "1.000000" }
+	}
+
+	"hud_ammo_alphamin"
+	{
+		"Ammo minimum opacity (0-255)"
+		{ NUMBER 0.000000 255.000000 }
+		{ "128.000000" }
+	}
+
+	"hud_ammo_x"
+	{
+		"Ammo screen position X (0-1, 0 is default)"
+		{ NUMBER 0.000000 1.000000 }
+		{ "0.000000" }
+	}
+
+	"hud_ammo_y"
+	{
+		"Ammo screen position Y (0-1, 0 is default)"
+		{ NUMBER 0.000000 1.000000 }
+		{ "0.000000" }
+	}
+	
+	"cl_placebo"
+	{
+		"------------------------------------------------------- VIDEO -----------------------------------------------------------------"
+		{ BOOL }
+		{ "0" }
+	}
+	
+	"cl_postprocess"
+	{
+		"Post-processing shaders"
+		{ BOOL }
+		{ "1" }
+	}
+	
+	"cl_intensity"
+	{
+		"Color intensity scale (requires post-processing)"
+		{ NUMBER 0.000000 2.000000 }
+		{ "1.000000" }
+	}
+
+	"cl_dynamiclights"
+	{
+		"Dynamic lights"
+		{
+			LIST
+			"Off" "0"
+			"On" "1"
+			"On + Welder flashing (EPILEPSY WARNING)" "2"
+		}
+		{ "0" }
+	}
+	
+	"r_decals"
+	{
+		"Decal limit"
+		{ NUMBER 0.000000 4096.000000 }
+		{ "300.000000" }
+	}
+
+	"cl_highdetail"
+	{
+		"High detail particle systems"
+		{ BOOL }
+		{ "1" }
+	}
+	
+	"cl_placebo"
+	{
+		"---------------------------------------------------- CROSSHAIR -------------------------------------------------------------"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"crosshair"
+	{
+		"Enable Legacy crosshair system ----------------------------------------------------------------------------------------"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_customcrosshair"
+	{
+		"Legacy crosshair selection"
+		{
+			LIST
+			"Classic crosshairs" "0"
+			"Custom 1" "1"
+			"Custom 2" "2"
+			"Custom 3" "3"
+			"Custom 4" "4"
+		}
+		{ "0.000000" }
+	}
+
+	"cl_cross"
+	{
+		"Enable New crosshair system -------------------------------------------------------------------------------------------"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_weaponcfgs"
+	{
+		"Per-weapon crosshairs"
+		{
+			LIST
+			"Off" "0"
+			"Config files" "1"
+			"Default crosshairs" "2"
+		}
+		{ "2" }
+	}
+
+	"cl_cross_scaling"
+	{
+		"Upscale crosshairs when above 1080p"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_cross_color"
+	{
+		"Crosshair color (R G B)"
+		{ STRING }
+		{ "255 255 255" }
+	}
+
+	"cl_cross_alpha"
+	{
+		"Crosshair transparency (0-255)"
+		{ STRING }
+		{ "255" }
+	}
+
+	"cl_cross_size"
+	{
+		"Crosshair length"
+		{ NUMBER -1.000000 -1.000000 }
+		{ "6.000000" }
+	}
+
+	"cl_cross_gap"
+	{
+		"Crosshair gap"
+		{ NUMBER -1.000000 -1.000000 }
+		{ "3.000000" }
+	}
+
+	"cl_cross_thickness"
+	{
+		"Crosshair thickness"
+		{ NUMBER -1.000000 -1.000000 }
+		{ "1.000000" }
+	}
+
+	"cl_cross_outline"
+	{
+		"Crosshair outline thickness"
+		{ NUMBER -1.000000 -1.000000 }
+		{ "2.000000" }
+	}
+
+	"cl_cross_outline_alpha"
+	{
+		"Crosshair outline transparency (0-255)"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_outline_inner"
+	{
+		"Outline inside of cross"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_cross_line_top"
+	{
+		"Cross top line"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_cross_line_bottom"
+	{
+		"Cross bottom line"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_cross_line_left"
+	{
+		"Cross left line"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_cross_line_right"
+	{
+		"Cross right line"
+		{ BOOL }
+		{ "1" }
+	}
+
+	"cl_cross_dot_round"
+	{
+		"Dot is rounded"
+		{ BOOL }
+		{ "0" }
+	}
+
+	"cl_cross_dot_size"
+	{
+		"Dot size"
+		{ NUMBER -1.000000 -1.000000 }
+		{ "0.000000" }
+	}
+
+	"cl_cross_dot_color"
+	{
+		"Dot color (R G B)"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_dot_alpha"
+	{
+		"Dot transparency (0-255)"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_dot_outline"
+	{
+		"Dot outline thickness"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_dot_outline_alpha"
+	{
+		"Dot outline transparency (0-255)"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_circle_radius"
+	{
+		"Circle size"
+		{ NUMBER 0.000000 255.000000 }
+		{ "0.000000" }
+	}
+
+	"cl_cross_circle_thickness"
+	{
+		"Circle thickness"
+		{ NUMBER 0.000000 255.000000 }
+		{ "1.000000" }
+	}
+
+	"cl_cross_circle_color"
+	{
+		"Circle color (R G B)"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_circle_alpha"
+	{
+		"Circle transparency (0-255)"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_circle_outline"
+	{
+		"Circle outline thickness"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_circle_outline_alpha"
+	{
+		"Circle outline transparency (0-255)"
+		{ STRING }
+		{ "" }
+	}
+
+	"cl_cross_circle_outline_inner"
+	{
+		"Outline inside of the circle"
+		{ BOOL }
+		{ "0" }
+	}
+	
+}
